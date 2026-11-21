@@ -1,0 +1,92 @@
+body:has(.form-layout) .page-hero {
+  min-height: 390px;
+  display: grid;
+  place-content: center;
+  background: linear-gradient(90deg, rgba(9, 33, 63, .96), rgba(18, 52, 93, .78)), url("../Images/School.jpg") center 60%/cover;
+}
+
+.form-layout {
+  align-items: stretch
+}
+
+.contact-details {
+  position: relative;
+  overflow: hidden;
+  border-radius: 3px;
+  box-shadow: 0 20px 50px rgba(9, 33, 63, .16)
+}
+
+.contact-details::after {
+  content: "RP";
+  position: absolute;
+  right: -15px;
+  bottom: -55px;
+  font-family: "Playfair Display", serif;
+  font-size: 11rem;
+  line-height: 1;
+  color: rgba(255, 255, 255, .035);
+  pointer-events: none
+}
+
+.contact-details h2 {
+  max-width: 400px;
+  font-size: 2.8rem
+}
+
+.detail {
+  position: relative;
+  z-index: 1
+}
+
+.detail a {
+  transition: color .25s ease
+}
+
+.detail a:hover {
+  color: #dfc27f
+}
+
+.form-card {
+  border-radius: 3px;
+  background: #fff
+}
+
+.field label {
+  color: #24364d
+}
+
+.field input,
+.field textarea,
+.field select {
+  border-radius: 2px;
+  transition: border-color .25s ease, box-shadow .25s ease, background .25s ease
+}
+
+.field input:hover,
+.field textarea:hover,
+.field select:hover {
+  border-color: #b6c1cf;
+  background: #fff
+}
+
+.field textarea {
+  max-height: 220px
+}
+
+.form-card .button {
+  min-width: 180px
+}
+
+.form-status {
+  min-height: 24px
+}
+
+@media(max-width:900px) {
+  body:has(.form-layout) .page-hero {
+    min-height: 330px
+  }
+
+  .contact-details h2 {
+    font-size: 2.4rem
+  }
+}

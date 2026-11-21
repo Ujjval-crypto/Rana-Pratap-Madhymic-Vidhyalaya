@@ -1,0 +1,88 @@
+body:has(.program-grid) .page-hero {
+  min-height: 390px;
+  display: grid;
+  place-content: center;
+  background: linear-gradient(90deg, rgba(9, 33, 63, .97), rgba(18, 52, 93, .78)), url("../Images/Students in a classroom.jpg") center 45%/cover;
+}
+
+.program-grid {
+  align-items: stretch
+}
+
+.program-card {
+  position: relative;
+  min-height: 210px;
+  background: #fff;
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease
+}
+
+.program-card.is-selected {
+  border: 1px solid #c4a057;
+  box-shadow: 0 16px 38px rgba(18, 52, 93, .12);
+  transform: translateY(-5px)
+}
+
+.program-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 0;
+  background: #c4a057;
+  transition: height .35s ease
+}
+
+.program-card:hover::before {
+  height: 100%
+}
+
+.program-card span {
+  display: inline-block;
+  margin-bottom: 12px;
+  letter-spacing: 1.4px;
+  font-size: .72rem;
+  font-weight: 700
+}
+
+.program-card h3 {
+  font-size: 1.55rem
+}
+
+.program-card p {
+  line-height: 1.75;
+  margin-top: 10px
+}
+
+.cta-section {
+  position: relative;
+  overflow: hidden
+}
+
+.cta-section::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -160px;
+  top: -130px;
+  border: 1px solid rgba(196, 160, 87, .28);
+  border-radius: 50%
+}
+
+@media(max-width:900px) {
+  body:has(.program-grid) .page-hero {
+    min-height: 330px
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+  .program-card,
+  .program-card::before {
+    transition: none
+  }
+}
